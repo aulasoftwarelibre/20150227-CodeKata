@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use aulasl\FizzBuzz\FizzBuzzGame;
+
+if ( 4 !== count( $argv ) ) {
+    print basename( $argv[0] ) . ": fizz buzz limit\n";
+    exit(1);
+}
+
+print FizzBuzzGame::play( $argv[1], $argv[2], $argv[3] ) . "\n";
+

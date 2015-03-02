@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use aulasl\ArabicRoman\ArabicRomanGame;
+
+if ( 2 !== count( $argv ) ) {
+    print basename( $argv[0] ) . ": number\n";
+    exit(1);
+}
+
+print ArabicRomanGame::play( $argv[1] ) . "\n" ;
